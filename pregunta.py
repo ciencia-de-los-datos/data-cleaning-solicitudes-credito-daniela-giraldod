@@ -36,7 +36,7 @@ def clean_data():
     
     df["fecha_de_beneficio"] = pd.to_datetime(df["fecha_de_beneficio"] )
     
-    df["monto_del_credito"] = df["monto_del_credito"].apply(lambda x : x.replace("$",""))
+    df["monto_del_credito"] = df["monto_del_credito"].apply(lambda x : str(x).strip("$"))
     df["monto_del_credito"] = df["monto_del_credito"].apply(lambda x : x.replace(",",""))
     df["monto_del_credito"] = df["monto_del_credito"].apply(lambda x : x.replace("  ",""))
     df["monto_del_credito"] = df["monto_del_credito"].apply(lambda x : x.replace(" ",""))
