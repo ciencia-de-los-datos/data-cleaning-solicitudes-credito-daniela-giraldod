@@ -8,6 +8,7 @@ correctamente. Tenga en cuenta datos faltantes y duplicados.
 """
 import pandas as pd
 
+df = pd.read_csv("solicitudes_credito.csv",delimiter = ';')
 
 def clean_data():
 
